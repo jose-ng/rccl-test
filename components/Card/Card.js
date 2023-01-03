@@ -15,16 +15,18 @@ function Card({ item }) {
           />
         </div>
         <div className={styles["Card-Body"]}>
-          <p className={styles["Card-NoNigths"]}>{item.numberNights} NIGTHS</p>
-          <h3 className={styles["Card-CruiseName"]}>{item.name}</h3>
-          <p className={styles["Card-ShipName"]}>{item.shipName} </p>
+          <p className={styles["Card-Subheading"]}>
+            {item.numberNights} NIGTHS
+          </p>
+          <h3 className={styles["Card-Heading"]}>{item.name}</h3>
+          <p>{item.shipName} </p>
           <p>
             <b>ROUNDTRIP FROM: </b>
-            <span className={styles["Card-RoundTrip"]}>{item.roundTrip} </span>
+            <span >{item.roundTrip} </span>
           </p>
           <p>
             <b>VISITING: </b>
-            <span className={styles["Card-Visiting"]}>
+            <span >
               {item.visiting.join(" ")}
             </span>
           </p>

@@ -1,92 +1,64 @@
-$medium: 640px;
+@import "../../styles/variables";
 .Card {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 5px;
   margin-bottom: 1rem;
   background-color: white;
+  box-shadow: 0px 3px 6px 0px #e1e1e1;
+  position: relative;
+
   &-Image {
     position: relative;
-
     img {
       width: 100%;
       object-fit: cover;
       height: auto;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
       max-height: 275px;
     }
   }
   &-Body {
     padding: 1rem;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
-  &-NoNigths {
-    font-size: 16px;
-    font-style: normal;
+  &-Heading,
+  &-Subheading,
+  &-Heading + p {
+    color: $primaryColor;
+  }
+  &-Subheading {
     font-weight: 700;
-    line-height: 125%;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    margin-bottom: 0px;
-    @media (min-width: ($medium+1)) {
-      font-size: 22px;
-    }
-  }
-  &-CruiseName {
-    font-size: 20px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 125%;
-    letter-spacing: -0.02em;
-    @media (min-width: ($medium+1)) {
-      font-size: 30px;
-    }
-  }
-  &-ShipName {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: -0.02em;
     @media (min-width: ($medium+1)) {
       font-size: 18px;
     }
   }
-  &-RoundTrip {
-    font-style: normal;
-    font-size: 12px;
-    line-height: 17px;
-    letter-spacing: 0.04em;
+  &-Heading {
     @media (min-width: ($medium+1)) {
-      font-size: 14px;
-    }
-  }
-  &-Visiting {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: rgb(73, 74, 76);
-    // white-space: nowrap;
-    white-space: normal; // better result
-    margin-right: 5px;
-    @media (min-width: ($medium+1)) {
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 
   // Media Queries (Mobile first approach)
   @media (min-width: ($medium+1)) {
     display: flex;
+    padding-right: 20px;
+    &::after {
+      content: "";
+      background-color: $accentColor;
+      width: 20px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
     &-Image {
       min-width: 30%;
       img {
         border-top-right-radius: 0px;
-        border-bottom-left-radius: 10px;
+        border-bottom-left-radius: 5px;
         left: 0;
         top: 0;
         width: 100%;
