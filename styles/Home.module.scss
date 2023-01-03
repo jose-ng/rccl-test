@@ -1,0 +1,21 @@
+$medium: 640px;
+
+.Container {
+  background-color: rgb(243, 243, 243);
+  width: 100%;
+  &-Title {
+    font-size: 1rem;
+    padding: 0.5em;
+  }
+  &-Cards {
+    width: 100%;
+    padding: 10px;
+    padding-top: 2rem;
+
+    // Media Queries (Mobile first approach)
+    @media (min-width: ($medium+1)) {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
