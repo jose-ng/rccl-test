@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+.Container {
+  width: 100%;
+  // Media Queries (Mobile first approach)
+  @media (min-width: ($medium+1)) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  // Media Queries (Mobile first approach)
+  @media (min-width: $x-large) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}

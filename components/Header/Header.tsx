@@ -1,8 +1,10 @@
 import styles from "./Header.module.scss";
 
-function Header() {
+function Header(props: any) {
   return (
-    <h1 className={styles["Header-Title"]}>All Cruise serarch Results (571)</h1>
+    <h1 className={styles["Header-Title"]}>
+      All Cruise serarch Results ({props.totalCardItems})
+    </h1>
   );
 }
 

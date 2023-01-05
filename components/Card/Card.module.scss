@@ -5,6 +5,11 @@
   background-color: white;
   box-shadow: 0px 3px 6px 0px #e1e1e1;
   position: relative;
+  transition: box-shadow 1s ease;
+  &:hover{
+    box-shadow: 0px 3px 6px 0px #cac8c8;
+    cursor: pointer;
+  }
 
   &-Image {
     position: relative;

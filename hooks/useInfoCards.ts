@@ -1,3 +1,7 @@
+/**
+ * Improve code readability by isolating the states in a custom hook
+ */
+
 import { useEffect, useState } from "react";
 import data from "../data/data";
 
