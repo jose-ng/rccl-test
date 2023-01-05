@@ -1,3 +1,9 @@
+/**
+ * Render props consists of delegating what a component is going to render to another component, 
+ * most of the time, to a parent in the component tree. In general we use render props when we want 
+ * to give the consumer of our component as much freedom as possible to define what it is going to render, 
+ * without necessarily tying it to a specific template.
+ */
 import Card from "../components/Card/Card";
 import useInfoCards from "../hooks/useInfoCards";
 import CardError from "../components/CardError/CardError";
