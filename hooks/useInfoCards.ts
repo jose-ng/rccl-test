@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import  CardData  from "../components/interfaces/cardData";
+import  CardData  from "../interfaces/cardData";
 import data from "../data/data";
 
 function useInfoCards() {

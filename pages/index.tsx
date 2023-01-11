@@ -13,7 +13,7 @@ import EmptyCards from "../components/EmptyCards/EmptyCards";
 import CardList from "../components/CardList/CardList";
 import Header from "../components/Header/Header";
 import Container from "../components/Container/Container";
-import CardData from "../components/interfaces/cardData";
+import CardData from "../interfaces/cardData";
 
 const Home: NextPage = () => {
   const { cardItems, loading, error, totalCardItems } = useInfoCards();

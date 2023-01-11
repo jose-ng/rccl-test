@@ -1,4 +1,4 @@
-import CardData from "../interfaces/cardData";
+import CardData from "../../interfaces/cardData";
 import styles from "./CardList.module.scss";
 interface Props {
   loading: boolean;

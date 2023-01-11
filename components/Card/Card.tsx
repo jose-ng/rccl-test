@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import CardData from "../interfaces/cardData";
+import CardData from "../../interfaces/cardData";
 import styles from "./Card.module.scss";
 
 interface Props {
