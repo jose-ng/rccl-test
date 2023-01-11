@@ -1,9 +1,10 @@
 /**
- * Render props consists of delegating what a component is going to render to another component, 
- * most of the time, to a parent in the component tree. In general we use render props when we want 
- * to give the consumer of our component as much freedom as possible to define what it is going to render, 
+ * Render props consists of delegating what a component is going to render to another component,
+ * most of the time, to a parent in the component tree. In general we use render props when we want
+ * to give the consumer of our component as much freedom as possible to define what it is going to render,
  * without necessarily tying it to a specific template.
  */
+import type { NextPage } from "next";
 import Card from "../components/Card/Card";
 import useInfoCards from "../hooks/useInfoCards";
 import CardError from "../components/CardError/CardError";
@@ -12,12 +13,13 @@ import EmptyCards from "../components/EmptyCards/EmptyCards";
 import CardList from "../components/CardList/CardList";
 import Header from "../components/Header/Header";
 import Container from "../components/Container/Container";
+import CardData from "../components/interfaces/cardData";
 
-export default function Home() {
+const Home: NextPage = () => {
   const { cardItems, loading, error, totalCardItems } = useInfoCards();
   return (
     <Container>
-      <Header totalCardItems={totalCardItems}/>
+      <Header totalCardItems={totalCardItems} />
       <CardList
         error={error}
         loading={loading}
@@ -26,8 +28,9 @@ export default function Home() {
         onError={() => <CardError msg={error} />}
         onLoading={() => <CardLoading />}
         onEmptyCards={() => <EmptyCards />}
-        render={(item: any) => <Card key={item.text} data={item} />}
+        render={(item: CardData) => <Card key={item.name} data={item} />}
       ></CardList>
     </Container>
   );
-}
+};
+export default Home;

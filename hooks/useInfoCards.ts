@@ -1,15 +1,12 @@
-/**
- * Improve code readability by isolating the states in a custom hook
- */
-
 import { useEffect, useState } from "react";
+import  CardData  from "../components/interfaces/cardData";
 import data from "../data/data";
 
 function useInfoCards() {
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [cardItems, setcardItems] = useState<any>([]);
-  const [totalCardItems, setTotalCardItems] = useState(0);
+  const [error, setError] = useState<string>();
+  const [loading, setLoading] = useState<boolean>(false);
+  const [cardItems, setcardItems] = useState<CardData[]>([]);
+  const [totalCardItems, setTotalCardItems] = useState<number>(0);
 
   useEffect(() => {
     setLoading(true);

@@ -1,6 +1,8 @@
-
 import styles from "./Container.module.scss";
-function Container({ children }: any) {
+interface Props {
+  children?: React.ReactNode; 
+}
+function Container({ children }: Props) {
   return (
     <main>
       <div className={styles["Container"]}>{children}</div>

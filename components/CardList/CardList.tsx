@@ -1,9 +1,19 @@
+import CardData from "../interfaces/cardData";
 import styles from "./CardList.module.scss";
+interface Props {
+  loading: boolean;
+  error: string | undefined;
+  totalCardItems: number;
+  onLoading: () => JSX.Element;
+  onEmptyCards: () => JSX.Element;
+  render: (item: CardData) => JSX.Element;
+  onError: () => JSX.Element;
+  cardItems: CardData[];
+}
+function CardList(props: Props) {
+  const renderFunc = props.render;
 
-function CardList(props: any) {
-  const renderFunc = props.children || props.render;
-  
-  return (    
+  return (
     <section className={styles["CardList"]}>
       {props.error && props.onError()}
       {props.loading && props.onLoading()}

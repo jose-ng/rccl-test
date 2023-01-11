@@ -1,8 +1,13 @@
 import Image from "next/image";
 import React from "react";
+import CardData from "../interfaces/cardData";
 import styles from "./Card.module.scss";
 
-function Card({ data }: any) {
+interface Props {
+  children?: React.ReactNode; 
+  data: CardData
+}
+function Card({ data }: Props) {
   return (
     <React.Fragment>
       <div className={styles["Card"]}>
